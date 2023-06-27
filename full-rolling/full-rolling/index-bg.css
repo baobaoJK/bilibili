@@ -1,0 +1,87 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* 屏幕样式 */
+.container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: auto;
+    /* transition: all 0.3s ease; */
+}
+
+/* 屏幕动画 */
+.container-animation {
+    transition: all 0.5s ease;
+}
+
+/* 屏幕 */
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    color: white;
+    background-size: cover;
+}
+
+.section-1 {
+    background-color: rebeccapurple;
+    background: url("1.png") no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+.section-2 {
+    background-color: skyblue;
+    background: url("2.png") no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+.section-3 {
+    background-color: firebrick;
+    background: url("3.png") no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+.section-4 {
+    background-color: orange;
+    background: url("4.png") no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+/* 侧边按钮样式 */
+.controls {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    list-style: none;
+}
+
+.controls li {
+    width: 12px;
+    height: 12px;
+    border: 1px solid white;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+
+.controls li {
+    margin-top: 16px;
+}
+
+.controls li.active {
+    background-color: #fff;
+}
