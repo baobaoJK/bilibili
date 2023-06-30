@@ -30,7 +30,7 @@
 
 ### 登录页面
 
-![login.png](images\login.png)
+![login.png](images/login.png)
 
 
 
