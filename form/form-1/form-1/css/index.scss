@@ -1,0 +1,106 @@
+@keyframes background-animation {
+    0% {
+        filter: blur(0px);
+    }
+
+    100% {
+        filter: blur(2px);
+    }
+}
+
+@keyframes title {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+html,
+body,
+.main {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    min-width: 1600px;
+    min-height: 800px;
+}
+
+.main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    .background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: transparent url("../images/background.png") no-repeat scroll center;
+        background-size: 100%;
+        transform: scale(1.1);
+        filter: blur(2px);
+        animation: background-animation 1s;
+    }
+
+    .index {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+        .title {
+            letter-spacing: 12px;
+            font-size: 36px;
+            color: white;
+            animation: title 1s;
+        }
+
+        .link {
+            display: flex;
+            justify-content: space-between;
+            width: 420px;
+            opacity: 0;
+            animation: title 1s;
+            animation-delay: 0.8s;
+            animation-fill-mode: forwards;
+
+            a {
+                position: relative;
+                outline: none;
+                text-decoration: none;
+                font-size: 28px;
+                color: white;
+                transition: all 0.5s;
+
+                &:hover {
+                    color: rebeccapurple;
+                }
+
+                &::before {
+                    position: absolute;
+                    left: -22px;
+                    bottom: -8px;
+                    content: '';
+                    width: 0px;
+                    height: 2px;
+                    background-color: rebeccapurple;
+                    transition: all 0.5s;
+                }
+
+                &:hover::before {
+                    width: 100px;
+                }
+            }
+        }
+    }
+}
