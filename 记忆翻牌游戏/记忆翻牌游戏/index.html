@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>记忆翻牌游戏</title>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="card-box">
+
+            <div class="card flip" data-name="古河渚">
+                <div class="front-face">
+                    <img src="images/古河渚.jpg" alt="古河渚">
+                </div>
+                <div class="back-face">
+                    <img src="images/logo.png" alt="logo">
+                </div>
+            </div>
+            <div class="card flip" data-name="古河渚">
+                <div class="front-face">
+                    <img src="images/古河渚.jpg" alt="古河渚">
+                </div>
+                <div class="back-face">
+                    <img src="images/logo.png" alt="logo">
+                </div>
+            </div>
+
+            <div class="card flip" data-name="冈崎朋也">
+                <div class="front-face">
+                    <img src="images/冈崎朋也.jpg" alt="冈崎朋也">
+                </div>
+                <div class="back-face">
+                    <img src="images/logo.png" alt="logo">
+                </div>
+            </div>
+            <div class="card flip" data-name="冈崎朋也">
+                <div class="front-face">
+                    <img src="images/冈崎朋也.jpg" alt="冈崎朋也">
+                </div>
+                <div class="back-face">
+                    <img src="images/logo.png" alt="logo">
+                </div>
+            </div>
+
+            <div class="card flip" data-name="和泉纱雾">
+                <div class="front-face">
+                    <img src="images/和泉纱雾.jpg" alt="和泉纱雾">
+                </div>
+                <div class="back-face">
+                    <img src="images/logo.png" alt="logo">
+                </div>
+            </div>
+            <div class="card flip" data-name="和泉纱雾">
+                <div class="front-face">
+                    <img src="images/和泉纱雾.jpg" alt="和泉纱雾">
+                </div>
+                <div class="back-face">
+                    <img src="images/logo.png" alt="logo">
+                </div>
+            </div>
+
+            <div class="card flip" data-name="和泉征宗">
+                <div class="front-face">
+                    <img src="images/和泉征宗.jpg" alt="和泉征宗">
+                </div>
+                <div class="back-face">
+                    <img src="images/logo.png" alt="logo">
+                </div>
+            </div>
+            <div class="card flip" data-name="和泉征宗">
+                <div class="front-face">
+                    <img src="images/和泉征宗.jpg" alt="和泉征宗">
+                </div>
+                <div class="back-face">
+                    <img src="images/logo.png" alt="logo">
+                </div>
+            </div>
+
+            <div class="card flip" data-name="小鸟游六花">
+                <div class="front-face">
+                    <img src="images/小鸟游六花.jpg" alt="小鸟游六花">
+                </div>
+                <div class="back-face">
+                    <img src="images/logo.png" alt="logo">
+                </div>
+            </div>
+            <div class="card flip" data-name="小鸟游六花">
+                <div class="front-face">
+                    <img src="images/小鸟游六花.jpg" alt="小鸟游六花">
+                </div>
+                <div class="back-face">
+                    <img src="images/logo.png" alt="logo">
+                </div>
+            </div>
+
+            <div class="card flip" data-name="富樫勇太">
+                <div class="front-face">
+                    <img src="images/富樫勇太.jpg" alt="富樫勇太">
+                </div>
+                <div class="back-face">
+                    <img src="images/logo.png" alt="logo">
+                </div>
+            </div>
+            <div class="card flip" data-name="富樫勇太">
+                <div class="front-face">
+                    <img src="images/富樫勇太.jpg" alt="富樫勇太">
+                </div>
+                <div class="back-face">
+                    <img src="images/logo.png" alt="logo">
+                </div>
+            </div>
+
+            <div class="card flip" data-name="可儿那由多">
+                <div class="front-face">
+                    <img src="images/可儿那由多.jpg" alt="可儿那由多">
+                </div>
+                <div class="back-face">
+                    <img src="images/logo.png" alt="logo">
+                </div>
+            </div>
+            <div class="card flip" data-name="可儿那由多">
+                <div class="front-face">
+                    <img src="images/可儿那由多.jpg" alt="可儿那由多">
+                </div>
+                <div class="back-face">
+                    <img src="images/logo.png" alt="logo">
+                </div>
+            </div>
+
+            <div class="card flip" data-name="羽岛伊月">
+                <div class="front-face">
+                    <img src="images/羽岛伊月.jpg" alt="羽岛伊月">
+                </div>
+                <div class="back-face">
+                    <img src="images/logo.png" alt="logo">
+                </div>
+            </div>
+            <div class="card flip" data-name="羽岛伊月">
+                <div class="front-face">
+                    <img src="images/羽岛伊月.jpg" alt="羽岛伊月">
+                </div>
+                <div class="back-face">
+                    <img src="images/logo.png" alt="logo">
+                </div>
+            </div>
+        </div>
+
+        <div class="options-bar">
+            <p class="time">时间： <span id="time">00:00</span></p>
+            <p class="info">你翻转了 <span id="count">0</span> 次卡片</p>
+            <button class="start" id="start">开始游戏</button>
+            <button class="reset" id="reset" disabled="disabled">重置游戏</button>
+        </div>
+    </div>
+</body>
+
+<script src="index.js"></script>
+
+</html>

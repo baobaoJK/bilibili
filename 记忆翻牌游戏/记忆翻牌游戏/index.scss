@@ -1,0 +1,130 @@
+$mainColor: #F8688D;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+html,
+body,
+.main {
+    width: 100%;
+    height: 100%;
+    min-width: 1200px;
+    min-height: 800px;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(315deg, #fc5296 0%, #f67062 74%);
+}
+
+// 卡片盒子
+.card-box {
+    display: flex;
+    width: 600px;
+    height: 800px;
+    flex-wrap: wrap;
+    perspective: 1000px;
+    background-color: rgba($color: #fff, $alpha: 0.5);
+    border-radius: 8px;
+
+    // 卡片样式
+    .card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: calc(25% - 10px);
+        height: calc(25% - 10px);
+        margin: 5px;
+        transform: scale(1);
+        transform-style: preserve-3d;
+        transition: transform 0.5s;
+        cursor: pointer;
+
+        &:active {
+            transform: scale(0.97);
+            transition: transform 0.2s;
+        }
+
+        &.flip {
+            transform: rotateY(180deg);
+        }
+
+        // 卡片样式
+        .front-face,
+        .back-face {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            background-color: $mainColor;
+            border-radius: 8px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 8px;
+            }
+        }
+
+        .front-face {
+            transform: rotateY(180deg);
+        }
+    }
+}
+
+// 操作栏
+.options-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background-color: rgba($color: #fff, $alpha: 0.5);
+
+    :nth-child(n) {
+        margin-bottom: 12px;
+    }
+
+    :nth-last-child(1) {
+        margin-bottom: 0;
+    }
+
+    p {
+        font-size: 18px;
+        font-weight: 100;
+    }
+
+    button {
+        padding: 12px 24px;
+        color: white;
+        font-size: 18px;
+        background-color: $mainColor;
+        border: none;
+        border-radius: 8px;
+        transition: opacity 0.5s;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.5;
+        }
+
+        &:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    }
+}
